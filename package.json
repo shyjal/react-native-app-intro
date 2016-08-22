@@ -1,14 +1,14 @@
 {
   "name": "react-native-app-intro",
   "version": "1.1.3",
-  "description": "react-native-app-intro is a react native plugin implementing a parallax effect welcome page using base on react-native-swiper , similar to the one found in Google's app like Sheet, Drive, Docs...",
+  "description": "This is a react native component implementing a parallax welcome page similar to the one found in Google's app like Sheet, Drive, Docs... This for exposes more functions available in https://github.com/leecade/react-native-swiper and not in https://github.com/FuYaoDe/react-native-app-intro",
   "main": "AppIntro.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fuyaode/react-native-app-intro.git"
+    "url": "git+https://github.com/shyjal/react-native-app-intro.git"
   },
   "keywords": [
     "swiper",
@@ -23,9 +23,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fuyaode/react-native-app-intro/issues"
+    "url": "https://github.com/shyjal/react-native-app-intro/issues"
   },
-  "homepage": "https://github.com/fuyaode/react-native-app-intro#readme",
+  "homepage": "https://github.com/shyjal/react-native-app-intro#readme",
   "dependencies": {
     "assign-deep": "^0.4.5",
     "react-native-swiper": "git+https://github.com/FuYaoDe/react-native-swiper.git"
