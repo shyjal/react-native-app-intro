@@ -400,6 +400,21 @@ export default class AppIntro extends Component {
           onMomentumScrollEnd={(e, state) => {
             this.props.onSlideChange(state.index, state.total);
           }}
+          onScrollBeginDrag={(e, state) => {
+            this.props.onScrollBeginDrag(e, state);
+          }}
+          onTouchStartCapture={(e, state) => {
+            this.props.onTouchStartCapture(e, state);
+          }}
+          onTouchStart={(e, state) => {
+            this.props.onTouchStart(e, state);
+          }}
+          onTouchEnd={(e, state) => {
+            this.props.onTouchEnd(e, state);
+          }}
+          onResponderRelease={(e, state) => {
+            this.props.onResponderRelease(e, state);
+          }}
           onScroll={Animated.event(
             [{ x: this.state.parallax }]
           )}
@@ -416,6 +431,11 @@ AppIntro.propTypes = {
   activeDotColor: PropTypes.string,
   rightTextColor: PropTypes.string,
   leftTextColor: PropTypes.string,
+  onScrollBeginDrag: PropTypes.func,
+  onTouchStartCapture: PropTypes.func,
+  onTouchStart: PropTypes.func,
+  onTouchEnd: PropTypes.func,
+  onResponderRelease: PropTypes.func,
   onSlideChange: PropTypes.func,
   onSkipBtnClick: PropTypes.func,
   onDoneBtnClick: PropTypes.func,
@@ -443,6 +463,11 @@ AppIntro.defaultProps = {
   leftTextColor: '#fff',
   pageArray: [],
   onSlideChange: () => {},
+  onScrollBeginDrag: () => {},
+  onTouchStartCapture: () => {},
+  onTouchStart: () => {},
+  onTouchEnd: () => {},
+  onResponderRelease: () => {},
   onSkipBtnClick: () => {},
   onDoneBtnClick: () => {},
   onNextBtnClick: () => {},
