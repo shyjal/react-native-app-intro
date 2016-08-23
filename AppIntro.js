@@ -416,9 +416,8 @@ export default class AppIntro extends Component {
             this.props.onResponderRelease(e, state);
           }}
           scrollEventThrottle={16}
-
-          onScroll={() => {
-            this.props.onScroll(this.state);
+          onScroll={(e,s) => {
+            this.props.onScroll(e.nativeEvent);
             Animated.event(
             [{ x: this.state.parallax }]
             )
