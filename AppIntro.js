@@ -415,9 +415,12 @@ export default class AppIntro extends Component {
           onResponderRelease={(e, state) => {
             this.props.onResponderRelease(e, state);
           }}
-          onScroll={Animated.event(
+          onScroll={(e, state) => {
+            this.props.onScroll(e, state);
+            Animated.event(
             [{ x: this.state.parallax }]
-          )}
+            )
+          }}
         >
           {pages}
         </Swiper>
@@ -431,6 +434,7 @@ AppIntro.propTypes = {
   activeDotColor: PropTypes.string,
   rightTextColor: PropTypes.string,
   leftTextColor: PropTypes.string,
+  onScroll: PropTypes.func,
   onScrollBeginDrag: PropTypes.func,
   onTouchStartCapture: PropTypes.func,
   onTouchStart: PropTypes.func,
@@ -463,6 +467,7 @@ AppIntro.defaultProps = {
   leftTextColor: '#fff',
   pageArray: [],
   onSlideChange: () => {},
+  onScroll: () => {},
   onScrollBeginDrag: () => {},
   onTouchStartCapture: () => {},
   onTouchStart: () => {},
